@@ -30,16 +30,16 @@
 [WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
 [WARNING] Multiple versions of scala libraries detected!
 [INFO] C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\test\scala:-1: info: compiling
-[INFO] Compiling 9 source files to C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\test-classes at 1370375788718
+[INFO] Compiling 9 source files to C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\test-classes at 1370379424537
 [WARNING] Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
 [WARNING] Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
 [INFO] prepare-compile in 0 s
-[INFO] compile in 9 s
+[INFO] compile in 8 s
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 10.514s
-[INFO] Finished at: Tue Jun 04 22:56:37 EEST 2013
+[INFO] Total time: 10.000s
+[INFO] Finished at: Tue Jun 04 23:57:13 EEST 2013
 [INFO] Final Memory: 14M/1024M
 [INFO] ------------------------------------------------------------------------
 [INFO] Scanning for projects...
@@ -87,146 +87,737 @@ Executor service type: scala-forkjoin-pool
 
 Single-producer sending:
 40,000,000 ops
-3,007,807,678 ns
-75 ns/op
-13,298,722 ops/s
+2,949,064,442 ns
+73 ns/op
+13,563,623 ops/s
 
 Multi-producer sending:
 20,000,000 ops
-1,586,246,597 ns
-79 ns/op
-12,608,380 ops/s
+1,623,751,747 ns
+81 ns/op
+12,317,153 ops/s
 
 Max throughput:
 40,000,000 ops
-1,987,238,528 ns
+1,987,861,647 ns
 49 ns/op
-20,128,434 ops/s
+20,122,124 ops/s
 
 Ping between actors:
 10,000,000 ops
-2,883,528,113 ns
-288 ns/op
-3,467,973 ops/s
+4,510,442,004 ns
+451 ns/op
+2,217,077 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.932 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.LiftActorSpec
+Executor service type: scala-forkjoin-pool
+
+Single-producer sending:
+20,000,000 ops
+2,072,760,108 ns
+103 ns/op
+9,648,969 ops/s
+
+Multi-producer sending:
+20,000,000 ops
+2,956,658,060 ns
+147 ns/op
+6,764,393 ops/s
+
+Max throughput:
+20,000,000 ops
+1,287,934,002 ns
+64 ns/op
+15,528,746 ops/s
+
+Ping between actors:
+2,000,000 ops
+1,445,230,429 ns
+722 ns/op
+1,383,862 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.705 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
+Executor service type: scala-forkjoin-pool
+
+Single-producer sending:
+10,000,000 ops
+3,416,271,536 ns
+341 ns/op
+2,927,167 ops/s
+
+Multi-producer sending:
+10,000,000 ops
+3,475,299,940 ns
+347 ns/op
+2,877,449 ops/s
+
+Max throughput:
+10,000,000 ops
+4,884,552,960 ns
+488 ns/op
+2,047,270 ops/s
+
+Ping between actors:
+10,000,000 ops
+4,576,617,579 ns
+457 ns/op
+2,185,019 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.347 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalaActorSpec
+Executor service type: scala-forkjoin-pool
+
+Single-producer sending:
+1,000,000 ops
+1,481,438,026 ns
+1,481 ns/op
+675,019 ops/s
+
+Multi-producer sending:
+1,000,000 ops
+1,458,716,918 ns
+1,458 ns/op
+685,533 ops/s
+
+Max throughput:
+5,000,000 ops
+5,281,184,161 ns
+1,056 ns/op
+946,757 ops/s
+
+Ping between actors:
+1,000,000 ops
+1,784,751,332 ns
+1,784 ns/op
+560,302 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.951 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalazActorSpec
+Executor service type: scala-forkjoin-pool
+
+Single-producer sending:
+100,000,000 ops
+9,121,174,601 ns
+91 ns/op
+10,963,500 ops/s
+
+Multi-producer sending:
+50,000,000 ops
+2,934,687,627 ns
+58 ns/op
+17,037,588 ops/s
+
+Max throughput:
+200,000,000 ops
+9,387,142,934 ns
+46 ns/op
+21,305,737 ops/s
+
+Ping between actors:
+10,000,000 ops
+3,406,932,452 ns
+340 ns/op
+2,935,191 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.803 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+
+Results :
+
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:24.194s
+[INFO] Finished at: Tue Jun 04 23:58:38 EEST 2013
+[INFO] Final Memory: 19M/1024M
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Actors 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ actors ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\main\resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.1.3:compile (compile) @ actors ---
+[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
+[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
+[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
+[WARNING] Multiple versions of scala libraries detected!
+[WARNING] No source files found.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ actors ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\test\resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.1.3:testCompile (testCompile) @ actors ---
+[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
+[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
+[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
+[WARNING] Multiple versions of scala libraries detected!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.13:test (default-test) @ actors ---
+[INFO] Surefire report directory: C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.plokhotnyuk.actors.AkkaActorSpec
+Executor service type: java-forkjoin-pool
+
+Single-producer sending:
+40,000,000 ops
+3,963,988,869 ns
+99 ns/op
+10,090,845 ops/s
+
+Multi-producer sending:
+20,000,000 ops
+3,810,619,556 ns
+190 ns/op
+5,248,490 ops/s
+
+Max throughput:
+40,000,000 ops
+1,637,767,886 ns
+40 ns/op
+24,423,485 ops/s
+
+Ping between actors:
+10,000,000 ops
+5,105,123,062 ns
+510 ns/op
+1,958,816 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.005 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.LiftActorSpec
+Executor service type: java-forkjoin-pool
+
+Single-producer sending:
+20,000,000 ops
+1,736,850,362 ns
+86 ns/op
+11,515,096 ops/s
+
+Multi-producer sending:
+20,000,000 ops
+2,955,400,094 ns
+147 ns/op
+6,767,273 ops/s
+
+Max throughput:
+20,000,000 ops
+1,251,993,613 ns
+62 ns/op
+15,974,522 ops/s
+
+Ping between actors:
+2,000,000 ops
+1,557,203,765 ns
+778 ns/op
+1,284,353 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.455 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
+Executor service type: java-forkjoin-pool
+
+Single-producer sending:
+10,000,000 ops
+2,472,481,244 ns
+247 ns/op
+4,044,520 ops/s
+
+Multi-producer sending:
+10,000,000 ops
+3,157,336,014 ns
+315 ns/op
+3,167,227 ops/s
+
+Max throughput:
+10,000,000 ops
+5,368,885,556 ns
+536 ns/op
+1,862,583 ops/s
+
+Ping between actors:
+10,000,000 ops
+4,511,840,722 ns
+451 ns/op
+2,216,390 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.536 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalaActorSpec
+Executor service type: java-forkjoin-pool
+
+Single-producer sending:
+1,000,000 ops
+1,505,355,156 ns
+1,505 ns/op
+664,295 ops/s
+
+Multi-producer sending:
+1,000,000 ops
+1,499,537,793 ns
+1,499 ns/op
+666,872 ops/s
+
+Max throughput:
+5,000,000 ops
+5,447,683,685 ns
+1,089 ns/op
+917,821 ops/s
+
+Ping between actors:
+1,000,000 ops
+2,006,913,686 ns
+2,006 ns/op
+498,277 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.435 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalazActorSpec
+Executor service type: java-forkjoin-pool
+
+Single-producer sending:
+100,000,000 ops
+9,090,768,239 ns
+90 ns/op
+11,000,170 ops/s
+
+Multi-producer sending:
+50,000,000 ops
+3,188,461,894 ns
+63 ns/op
+15,681,542 ops/s
+
+Max throughput:
+200,000,000 ops
+10,406,829,088 ns
+52 ns/op
+19,218,149 ops/s
+
+Ping between actors:
+10,000,000 ops
+3,396,280,421 ns
+339 ns/op
+2,944,397 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.05 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+
+Results :
+
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:28.031s
+[INFO] Finished at: Wed Jun 05 00:00:08 EEST 2013
+[INFO] Final Memory: 19M/1024M
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Actors 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ actors ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\main\resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.1.3:compile (compile) @ actors ---
+[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
+[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
+[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
+[WARNING] Multiple versions of scala libraries detected!
+[WARNING] No source files found.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ actors ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\test\resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.1.3:testCompile (testCompile) @ actors ---
+[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
+[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
+[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
+[WARNING] Multiple versions of scala libraries detected!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.13:test (default-test) @ actors ---
+[INFO] Surefire report directory: C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.plokhotnyuk.actors.AkkaActorSpec
+Executor service type: fast-thread-pool
+
+Single-producer sending:
+40,000,000 ops
+3,391,087,276 ns
+84 ns/op
+11,795,626 ops/s
+
+Multi-producer sending:
+20,000,000 ops
+1,588,027,250 ns
+79 ns/op
+12,594,242 ops/s
+
+Max throughput:
+40,000,000 ops
+1,897,326,894 ns
+47 ns/op
+21,082,292 ops/s
+
+Ping between actors:
+10,000,000 ops
+2,942,331,461 ns
+294 ns/op
+3,398,665 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.685 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.LiftActorSpec
+Executor service type: fast-thread-pool
+
+Single-producer sending:
+20,000,000 ops
+1,789,019,328 ns
+89 ns/op
+11,179,309 ops/s
+
+Multi-producer sending:
+20,000,000 ops
+2,949,882,560 ns
+147 ns/op
+6,779,930 ops/s
+
+Max throughput:
+20,000,000 ops
+1,258,524,631 ns
+62 ns/op
+15,891,623 ops/s
+
+Ping between actors:
+2,000,000 ops
+1,659,413,565 ns
+829 ns/op
+1,205,245 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.596 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
+Executor service type: fast-thread-pool
+
+Single-producer sending:
+10,000,000 ops
+2,170,513,142 ns
+217 ns/op
+4,607,205 ops/s
+
+Multi-producer sending:
+10,000,000 ops
+2,406,113,968 ns
+240 ns/op
+4,156,079 ops/s
+
+Max throughput:
+10,000,000 ops
+3,960,027,300 ns
+396 ns/op
+2,525,235 ops/s
+
+Ping between actors:
+10,000,000 ops
+3,274,532,917 ns
+327 ns/op
+3,053,870 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.808 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalaActorSpec
+Executor service type: fast-thread-pool
+
+Single-producer sending:
+1,000,000 ops
+2,967,109,228 ns
+2,967 ns/op
+337,028 ops/s
+
+Multi-producer sending:
+1,000,000 ops
+3,106,716,413 ns
+3,106 ns/op
+321,883 ops/s
+
+Max throughput:
+5,000,000 ops
+3,749,618,431 ns
+749 ns/op
+1,333,469 ops/s
+
+Ping between actors:
+1,000,000 ops
+2,747,280,637 ns
+2,747 ns/op
+363,996 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.572 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalazActorSpec
+Executor service type: fast-thread-pool
+
+Single-producer sending:
+100,000,000 ops
+2,846,903,760 ns
+28 ns/op
+35,125,880 ops/s
+
+Multi-producer sending:
+50,000,000 ops
+2,036,211,629 ns
+40 ns/op
+24,555,404 ops/s
+
+Max throughput:
+200,000,000 ops
+2,217,120,957 ns
+11 ns/op
+90,207,076 ops/s
+
+Ping between actors:
+10,000,000 ops
+2,728,368,616 ns
+272 ns/op
+3,665,193 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.764 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+
+Results :
+
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:05.848s
+[INFO] Finished at: Wed Jun 05 00:01:15 EEST 2013
+[INFO] Final Memory: 19M/1024M
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Actors 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ actors ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\main\resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.1.3:compile (compile) @ actors ---
+[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
+[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
+[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
+[WARNING] Multiple versions of scala libraries detected!
+[WARNING] No source files found.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ actors ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\test\resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.1.3:testCompile (testCompile) @ actors ---
+[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
+[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
+[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
+[WARNING] Multiple versions of scala libraries detected!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.13:test (default-test) @ actors ---
+[INFO] Surefire report directory: C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.plokhotnyuk.actors.AkkaActorSpec
+Executor service type: thread-pool
+
+Single-producer sending:
+40,000,000 ops
+3,324,451,326 ns
+83 ns/op
+12,032,060 ops/s
+
+Multi-producer sending:
+20,000,000 ops
+1,746,060,057 ns
+87 ns/op
+11,454,359 ops/s
+
+Max throughput:
+40,000,000 ops
+2,161,629,668 ns
+54 ns/op
+18,504,557 ops/s
+
+Ping between actors:
+10,000,000 ops
+29,530,398,298 ns
+2,953 ns/op
+338,634 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.673 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.LiftActorSpec
+Executor service type: thread-pool
+
+Single-producer sending:
+20,000,000 ops
+2,174,867,643 ns
+108 ns/op
+9,195,961 ops/s
+
+Multi-producer sending:
+20,000,000 ops
+3,073,471,197 ns
+153 ns/op
+6,507,300 ops/s
+
+Max throughput:
+20,000,000 ops
+1,159,418,696 ns
+57 ns/op
+17,250,023 ops/s
+
+Ping between actors:
+2,000,000 ops
+6,384,233,336 ns
+3,192 ns/op
+313,271 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.775 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
+Executor service type: thread-pool
+
+Single-producer sending:
+10,000,000 ops
+3,177,554,383 ns
+317 ns/op
+3,147,074 ops/s
+
+Multi-producer sending:
+10,000,000 ops
+3,547,430,698 ns
+354 ns/op
+2,818,941 ops/s
+
+Max throughput:
+10,000,000 ops
+5,008,665,749 ns
+500 ns/op
+1,996,539 ops/s
+
+Ping between actors:
+10,000,000 ops
+31,356,589,590 ns
+3,135 ns/op
+318,912 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.102 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalaActorSpec
+Executor service type: thread-pool
+
+Single-producer sending:
+1,000,000 ops
+2,660,063,441 ns
+2,660 ns/op
+375,930 ops/s
+
+Multi-producer sending:
+1,000,000 ops
+2,856,806,949 ns
+2,856 ns/op
+350,041 ops/s
+
+Max throughput:
+5,000,000 ops
+6,216,875,009 ns
+1,243 ns/op
+804,262 ops/s
+
+Ping between actors:
+1,000,000 ops
+5,568,023,673 ns
+5,568 ns/op
+179,596 ops/s
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.284 sec
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+Running com.github.plokhotnyuk.actors.ScalazActorSpec
+Executor service type: thread-pool
+
+Single-producer sending:
+100,000,000 ops
+2,821,541,361 ns
+28 ns/op
+35,441,621 ops/s
+
+Multi-producer sending:
+50,000,000 ops
+2,085,421,514 ns
+41 ns/op
+23,975,968 ops/s
+
+Max throughput:
+200,000,000 ops
+2,213,544,621 ns
+11 ns/op
+90,352,820 ops/s
+
+Ping between actors:
+10,000,000 ops
+3,284,867,159 ns
+328 ns/op
+3,044,263 ops/s
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.357 sec
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.LiftActorSpec
-Executor service type: scala-forkjoin-pool
-
-Single-producer sending:
-20,000,000 ops
-1,735,908,720 ns
-86 ns/op
-11,521,343 ops/s
-
-Multi-producer sending:
-20,000,000 ops
-3,066,045,454 ns
-153 ns/op
-6,523,060 ops/s
-
-Max throughput:
-20,000,000 ops
-1,273,625,730 ns
-63 ns/op
-15,703,200 ops/s
-
-Ping between actors:
-2,000,000 ops
-1,350,949,266 ns
-675 ns/op
-1,480,440 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.346 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
-Executor service type: scala-forkjoin-pool
-
-Single-producer sending:
-10,000,000 ops
-2,502,412,203 ns
-250 ns/op
-3,996,144 ops/s
-
-Multi-producer sending:
-10,000,000 ops
-2,714,919,882 ns
-271 ns/op
-3,683,349 ops/s
-
-Max throughput:
-10,000,000 ops
-4,119,079,089 ns
-411 ns/op
-2,427,727 ops/s
-
-Ping between actors:
-10,000,000 ops
-2,784,801,915 ns
-278 ns/op
-3,590,919 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.151 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalaActorSpec
-Executor service type: scala-forkjoin-pool
-
-Single-producer sending:
-1,000,000 ops
-1,487,050,493 ns
-1,487 ns/op
-672,472 ops/s
-
-Multi-producer sending:
-1,000,000 ops
-1,329,912,778 ns
-1,329 ns/op
-751,929 ops/s
-
-Max throughput:
-5,000,000 ops
-3,325,083,974 ns
-665 ns/op
-1,503,721 ops/s
-
-Ping between actors:
-1,000,000 ops
-1,841,996,883 ns
-1,841 ns/op
-542,889 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.939 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalazActorSpec
-Executor service type: scala-forkjoin-pool
-
-Single-producer sending:
-100,000,000 ops
-3,364,978,235 ns
-33 ns/op
-29,717,874 ops/s
-
-Multi-producer sending:
-50,000,000 ops
-1,930,283,644 ns
-38 ns/op
-25,902,928 ops/s
-
-Max throughput:
-200,000,000 ops
-3,882,280,410 ns
-19 ns/op
-51,516,113 ops/s
-
-Ping between actors:
-10,000,000 ops
-1,997,301,529 ns
-199 ns/op
-5,006,755 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.106 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
 
 Results :
 
@@ -235,598 +826,7 @@ Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1:02.369s
-[INFO] Finished at: Tue Jun 04 22:57:41 EEST 2013
-[INFO] Final Memory: 19M/1024M
-[INFO] ------------------------------------------------------------------------
-[INFO] Scanning for projects...
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Actors 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ actors ---
-[debug] execute contextualize
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\main\resources
-[INFO] 
-[INFO] --- scala-maven-plugin:3.1.3:compile (compile) @ actors ---
-[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
-[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
-[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
-[WARNING] Multiple versions of scala libraries detected!
-[WARNING] No source files found.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ actors ---
-[debug] execute contextualize
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\test\resources
-[INFO] 
-[INFO] --- scala-maven-plugin:3.1.3:testCompile (testCompile) @ actors ---
-[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
-[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
-[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
-[WARNING] Multiple versions of scala libraries detected!
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.13:test (default-test) @ actors ---
-[INFO] Surefire report directory: C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.github.plokhotnyuk.actors.AkkaActorSpec
-Executor service type: java-forkjoin-pool
-
-Single-producer sending:
-40,000,000 ops
-3,264,193,911 ns
-81 ns/op
-12,254,173 ops/s
-
-Multi-producer sending:
-20,000,000 ops
-1,651,347,475 ns
-82 ns/op
-12,111,321 ops/s
-
-Max throughput:
-40,000,000 ops
-1,639,225,984 ns
-40 ns/op
-24,401,760 ops/s
-
-Ping between actors:
-10,000,000 ops
-2,815,515,070 ns
-281 ns/op
-3,551,747 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.154 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.LiftActorSpec
-Executor service type: java-forkjoin-pool
-
-Single-producer sending:
-20,000,000 ops
-1,801,052,118 ns
-90 ns/op
-11,104,620 ops/s
-
-Multi-producer sending:
-20,000,000 ops
-3,034,491,088 ns
-151 ns/op
-6,590,890 ops/s
-
-Max throughput:
-20,000,000 ops
-1,188,556,462 ns
-59 ns/op
-16,827,134 ops/s
-
-Ping between actors:
-2,000,000 ops
-1,362,213,053 ns
-681 ns/op
-1,468,199 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.47 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
-Executor service type: java-forkjoin-pool
-
-Single-producer sending:
-10,000,000 ops
-2,420,709,241 ns
-242 ns/op
-4,131,020 ops/s
-
-Multi-producer sending:
-10,000,000 ops
-3,247,711,322 ns
-324 ns/op
-3,079,091 ops/s
-
-Max throughput:
-10,000,000 ops
-4,919,023,888 ns
-491 ns/op
-2,032,923 ops/s
-
-Ping between actors:
-10,000,000 ops
-2,545,941,078 ns
-254 ns/op
-3,927,820 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.211 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalaActorSpec
-Executor service type: java-forkjoin-pool
-
-Single-producer sending:
-1,000,000 ops
-1,296,683,689 ns
-1,296 ns/op
-771,198 ops/s
-
-Multi-producer sending:
-1,000,000 ops
-1,237,179,882 ns
-1,237 ns/op
-808,289 ops/s
-
-Max throughput:
-5,000,000 ops
-2,875,582,616 ns
-575 ns/op
-1,738,778 ops/s
-
-Ping between actors:
-1,000,000 ops
-1,656,929,521 ns
-1,656 ns/op
-603,525 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.065 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalazActorSpec
-Executor service type: java-forkjoin-pool
-
-Single-producer sending:
-100,000,000 ops
-3,803,397,243 ns
-38 ns/op
-26,292,283 ops/s
-
-Multi-producer sending:
-50,000,000 ops
-2,087,235,156 ns
-41 ns/op
-23,955,135 ops/s
-
-Max throughput:
-200,000,000 ops
-3,852,731,386 ns
-19 ns/op
-51,911,223 ops/s
-
-Ping between actors:
-10,000,000 ops
-2,246,288,045 ns
-224 ns/op
-4,451,788 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.933 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-
-Results :
-
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1:03.289s
-[INFO] Finished at: Tue Jun 04 22:58:46 EEST 2013
-[INFO] Final Memory: 19M/1024M
-[INFO] ------------------------------------------------------------------------
-[INFO] Scanning for projects...
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Actors 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ actors ---
-[debug] execute contextualize
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\main\resources
-[INFO] 
-[INFO] --- scala-maven-plugin:3.1.3:compile (compile) @ actors ---
-[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
-[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
-[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
-[WARNING] Multiple versions of scala libraries detected!
-[WARNING] No source files found.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ actors ---
-[debug] execute contextualize
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\test\resources
-[INFO] 
-[INFO] --- scala-maven-plugin:3.1.3:testCompile (testCompile) @ actors ---
-[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
-[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
-[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
-[WARNING] Multiple versions of scala libraries detected!
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.13:test (default-test) @ actors ---
-[INFO] Surefire report directory: C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.github.plokhotnyuk.actors.AkkaActorSpec
-Executor service type: fast-thread-pool
-
-Single-producer sending:
-40,000,000 ops
-3,472,642,522 ns
-86 ns/op
-11,518,605 ops/s
-
-Multi-producer sending:
-20,000,000 ops
-1,602,734,319 ns
-80 ns/op
-12,478,674 ops/s
-
-Max throughput:
-40,000,000 ops
-1,817,505,751 ns
-45 ns/op
-22,008,183 ops/s
-
-Ping between actors:
-10,000,000 ops
-2,847,700,253 ns
-284 ns/op
-3,511,605 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.591 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.LiftActorSpec
-Executor service type: fast-thread-pool
-
-Single-producer sending:
-20,000,000 ops
-1,963,416,699 ns
-98 ns/op
-10,186,324 ops/s
-
-Multi-producer sending:
-20,000,000 ops
-2,977,242,970 ns
-148 ns/op
-6,717,624 ops/s
-
-Max throughput:
-20,000,000 ops
-1,180,089,011 ns
-59 ns/op
-16,947,874 ops/s
-
-Ping between actors:
-2,000,000 ops
-1,688,169,761 ns
-844 ns/op
-1,184,714 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.752 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
-Executor service type: fast-thread-pool
-
-Single-producer sending:
-10,000,000 ops
-2,322,851,376 ns
-232 ns/op
-4,305,053 ops/s
-
-Multi-producer sending:
-10,000,000 ops
-2,443,402,858 ns
-244 ns/op
-4,092,652 ops/s
-
-Max throughput:
-10,000,000 ops
-3,447,859,257 ns
-344 ns/op
-2,900,350 ops/s
-
-Ping between actors:
-10,000,000 ops
-3,543,371,629 ns
-354 ns/op
-2,822,170 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.745 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalaActorSpec
-Executor service type: fast-thread-pool
-
-Single-producer sending:
-1,000,000 ops
-2,340,272,677 ns
-2,340 ns/op
-427,300 ops/s
-
-Multi-producer sending:
-1,000,000 ops
-2,055,160,669 ns
-2,055 ns/op
-486,579 ops/s
-
-Max throughput:
-5,000,000 ops
-2,643,781,348 ns
-528 ns/op
-1,891,230 ops/s
-
-Ping between actors:
-1,000,000 ops
-2,817,307,453 ns
-2,817 ns/op
-354,948 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.811 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalazActorSpec
-Executor service type: fast-thread-pool
-
-Single-producer sending:
-100,000,000 ops
-2,877,576,962 ns
-28 ns/op
-34,751,459 ops/s
-
-Multi-producer sending:
-50,000,000 ops
-1,859,934,272 ns
-37 ns/op
-26,882,670 ops/s
-
-Max throughput:
-200,000,000 ops
-2,385,108,635 ns
-11 ns/op
-83,853,622 ops/s
-
-Ping between actors:
-10,000,000 ops
-1,837,124,828 ns
-183 ns/op
-5,443,288 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.922 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-
-Results :
-
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1:02.322s
-[INFO] Finished at: Tue Jun 04 22:59:49 EEST 2013
-[INFO] Final Memory: 19M/1024M
-[INFO] ------------------------------------------------------------------------
-[INFO] Scanning for projects...
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Actors 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ actors ---
-[debug] execute contextualize
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\main\resources
-[INFO] 
-[INFO] --- scala-maven-plugin:3.1.3:compile (compile) @ actors ---
-[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
-[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
-[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
-[WARNING] Multiple versions of scala libraries detected!
-[WARNING] No source files found.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ actors ---
-[debug] execute contextualize
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\src\test\resources
-[INFO] 
-[INFO] --- scala-maven-plugin:3.1.3:testCompile (testCompile) @ actors ---
-[WARNING]  Expected all dependencies to require Scala version: 2.10.2-RC2
-[WARNING]  com.github.plokhotnyuk.actors:actors:1.0-SNAPSHOT requires scala version: 2.10.2-RC2
-[WARNING]  com.typesafe.akka:akka-actor_2.10:2.2.0-RC1 requires scala version: 2.10.1
-[WARNING] Multiple versions of scala libraries detected!
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.13:test (default-test) @ actors ---
-[INFO] Surefire report directory: C:\Users\Andriy\Projects\com\github\plokhotnyuk\actors\target\surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.github.plokhotnyuk.actors.AkkaActorSpec
-Executor service type: thread-pool
-
-Single-producer sending:
-40,000,000 ops
-3,117,326,293 ns
-77 ns/op
-12,831,508 ops/s
-
-Multi-producer sending:
-20,000,000 ops
-1,645,916,447 ns
-82 ns/op
-12,151,285 ops/s
-
-Max throughput:
-40,000,000 ops
-2,033,202,698 ns
-50 ns/op
-19,673,395 ops/s
-
-Ping between actors:
-10,000,000 ops
-13,783,819,586 ns
-1,378 ns/op
-725,488 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.48 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.LiftActorSpec
-Executor service type: thread-pool
-
-Single-producer sending:
-20,000,000 ops
-1,786,280,538 ns
-89 ns/op
-11,196,449 ops/s
-
-Multi-producer sending:
-20,000,000 ops
-3,042,843,078 ns
-152 ns/op
-6,572,800 ops/s
-
-Max throughput:
-20,000,000 ops
-1,003,152,248 ns
-50 ns/op
-19,937,153 ops/s
-
-Ping between actors:
-2,000,000 ops
-3,021,902,990 ns
-1,510 ns/op
-661,834 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.735 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ProxyActorsActorSpec
-Executor service type: thread-pool
-
-Single-producer sending:
-10,000,000 ops
-2,955,367,472 ns
-295 ns/op
-3,383,673 ops/s
-
-Multi-producer sending:
-10,000,000 ops
-3,350,396,890 ns
-335 ns/op
-2,984,721 ops/s
-
-Max throughput:
-10,000,000 ops
-4,827,335,266 ns
-482 ns/op
-2,071,536 ops/s
-
-Ping between actors:
-10,000,000 ops
-12,864,667,409 ns
-1,286 ns/op
-777,322 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.991 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalaActorSpec
-Executor service type: thread-pool
-
-Single-producer sending:
-1,000,000 ops
-3,847,310,620 ns
-3,847 ns/op
-259,921 ops/s
-
-Multi-producer sending:
-1,000,000 ops
-3,020,242,195 ns
-3,020 ns/op
-331,099 ops/s
-
-Max throughput:
-5,000,000 ops
-5,124,178,767 ns
-1,024 ns/op
-975,766 ops/s
-
-Ping between actors:
-1,000,000 ops
-3,693,274,570 ns
-3,693 ns/op
-270,762 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.629 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-Running com.github.plokhotnyuk.actors.ScalazActorSpec
-Executor service type: thread-pool
-
-Single-producer sending:
-100,000,000 ops
-2,685,355,097 ns
-26 ns/op
-37,239,022 ops/s
-
-Multi-producer sending:
-50,000,000 ops
-2,014,708,901 ns
-40 ns/op
-24,817,481 ops/s
-
-Max throughput:
-200,000,000 ops
-2,114,630,387 ns
-10 ns/op
-94,579,176 ops/s
-
-Ping between actors:
-10,000,000 ops
-2,954,006,873 ns
-295 ns/op
-3,385,232 ops/s
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.686 sec
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
-Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
-
-Results :
-
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1:33.070s
-[INFO] Finished at: Tue Jun 04 23:01:24 EEST 2013
+[INFO] Total time: 2:14.753s
+[INFO] Finished at: Wed Jun 05 00:03:31 EEST 2013
 [INFO] Final Memory: 19M/1024M
 [INFO] ------------------------------------------------------------------------
